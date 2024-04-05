@@ -6,8 +6,12 @@
 Virtual cursor for LXC Containers running X11 display
 
 <div align="center">
-    ![demo](asset/nv-demo.webm)
+  <video width="50%" controls>
+    <source src="asset/nv-demo.webm" type="video/webm">
+    Your browser does not support the webm.
+  </video>
 </div>
+
 
 ### Usage
 ```bash
