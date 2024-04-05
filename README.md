@@ -1,4 +1,4 @@
-![night-vision](../asset/logo.png)
+![night-vision](./asset/logo.png)
 
 # night-vision
 Virtual cursor for LXC Containers running X11 display
