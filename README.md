@@ -1,4 +1,6 @@
-<img src="asset/logo.png" alt="night-vision" width="50%" />
+<div align="center">
+    <img src="asset/logo.png" alt="night-vision" width="25%" />
+</div>
 
 # night-vision
 Virtual cursor for LXC Containers running X11 display
