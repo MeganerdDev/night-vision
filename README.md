@@ -6,7 +6,7 @@
 Virtual cursor for LXC Containers running X11 display
 
 <div align="center">
-    <img src="asset/nv-demo.webm" alt="night-vision-demo" width="25%" />
+    ![demo](asset/nv-demo.webm)
 </div>
 
 ### Usage
