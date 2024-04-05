@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "night-vision"
+version = "0.1.0"
+description = "Virtual cursor for LXC Containers running X11 display, Python release build"
+authors = ["meganerd <meganerd@meganerd.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python3-xlib = "^0.15"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
