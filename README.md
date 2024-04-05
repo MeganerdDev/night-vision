@@ -1,12 +1,15 @@
 <div align="center">
-    <img src="asset/logo.png" alt="night-vision" width="25%" />
+    <img src="asset/logo.png" alt="night-vision-logo" width="25%" />
 </div>
 
 # night-vision
 Virtual cursor for LXC Containers running X11 display
 
-### Usage
+<div align="center">
+    <img src="asset/nv-demo.webm" alt="night-vision-demo" width="25%" />
+</div>
 
+### Usage
 ```bash
 $ ./night-vision {ms}
 ```
