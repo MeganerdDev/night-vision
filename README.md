@@ -11,7 +11,8 @@ Virtual cursor for LXC Containers running X11 display
     Your browser does not support the webm.
   </video>
 </div>
-[[night-vision demo](asset/nv-demo.webm)](https://github.com/MeganerdDev/night-vision/blob/main/asset/nv-demo.webm)
+
+[night-vision demo.webm](https://github.com/MeganerdDev/night-vision/blob/main/asset/nv-demo.webm)
 
 ### Usage
 ```bash
