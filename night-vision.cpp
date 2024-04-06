@@ -38,6 +38,7 @@ int main(int argc, char* argv[]) {
     }
 
     int lastX = -1, lastY = -1; // Variables to track the last known mouse position
+    int minHeight = 0; // TODO: User-defined via dotfile settings
 
     while (true) {
         Window dummy;
@@ -54,6 +55,13 @@ int main(int argc, char* argv[]) {
                 for (int offset = -1; offset <= 1; ++offset) {
                     XDrawLine(display, window, gc, 12 + offset, 4, 12 + offset, 20);
                     XDrawLine(display, window, gc, 4, 12 + offset, 20, 12 + offset);
+                }
+                //XRaiseWindow(display, window) // Expensive to call constantly
+                XWindowAttributes winAttrs;
+                if (XGetWindowAttributes(display, root, &winAttrs)) {
+                    if (winAttrs.height >= minHeight) {
+                        XRaiseWindow(display, window); // Conditionally raise the cursor window
+                    }
                 }
                 XFlush(display);
             }
