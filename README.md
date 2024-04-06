@@ -28,11 +28,16 @@ $ ./night-vision 50
 $ ./night-vision 1
 ```
 
-### Building
-You can use a pre-made build or run:
+### Building from source
 ```bash
 $ g++ night-vision.cpp -o ./build/night-vision -lX11
 ```
+
+### Compiled release builds
+Compiled builds are available for amd64, aarch64 at the moment. 
+
+### Contributing
+Keep CPU cost to minimum on PRs since we are targing ARM.
 
 ### Python
 There is also a python release of night-vision in `./python`
