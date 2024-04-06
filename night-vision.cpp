@@ -56,7 +56,6 @@ int main(int argc, char* argv[]) {
                     XDrawLine(display, window, gc, 12 + offset, 4, 12 + offset, 20);
                     XDrawLine(display, window, gc, 4, 12 + offset, 20, 12 + offset);
                 }
-                //XRaiseWindow(display, window) // Expensive to call constantly
                 XWindowAttributes winAttrs;
                 if (XGetWindowAttributes(display, root, &winAttrs)) {
                     if (winAttrs.height >= minHeight) {
