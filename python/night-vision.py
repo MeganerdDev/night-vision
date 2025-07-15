@@ -21,8 +21,7 @@ def draw_crosshair():
 if __name__ == "__main__":
     while True:
         pointer = root.query_pointer()
-        x, y = pointer.root_x, pointer.root_y
-        window.configure(x=x - 10, y=y - 10)
+        window.configure(x=pointer.root_x-10, y=pointer.root_y-10)
         draw_crosshair()
         d.flush()
         time.sleep(0.1)
