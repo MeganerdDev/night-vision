@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <cstdlib>
 
+
 int main(int argc, char* argv[]) {
     Display* display = XOpenDisplay(nullptr);
     if (!display) return -1;
@@ -32,13 +33,13 @@ int main(int argc, char* argv[]) {
     GC gc = XCreateGC(display, window, 0, nullptr);
     XSetForeground(display, gc, crossColor.pixel);
 
-    int sleepTime = 100000; // Default sleep time in microseconds (100ms)
+    int sleepTime = 100000;
     if (argc > 1) {
-        sleepTime = atoi(argv[1]) * 1000; // Convert milliseconds to microseconds
+        sleepTime = atoi(argv[1]) * 1000;
     }
 
-    int lastX = -1, lastY = -1; // Variables to track the last known mouse position
-    int minHeight = 0; // TODO: User-defined via dotfile settings
+    int lastX = -1, lastY = -1;
+    int minHeight = 0;
 
     while (true) {
         Window dummy;
@@ -46,10 +47,10 @@ int main(int argc, char* argv[]) {
         unsigned int dummy3;
 
         if (XQueryPointer(display, root, &dummy, &dummy, &x, &y, &dummy2, &dummy2, &dummy3)) {
-            if (x != lastX || y != lastY) { // Check if the mouse has actually moved
+            if (x != lastX || y != lastY) {
                 lastX = x;
                 lastY = y;
-                XMoveWindow(display, window, x - 12, y - 12); // Move the window only if necessary
+                XMoveWindow(display, window, x - 12, y - 12);
 
                 XClearWindow(display, window);
                 for (int offset = -1; offset <= 1; ++offset) {
@@ -59,7 +60,7 @@ int main(int argc, char* argv[]) {
                 XWindowAttributes winAttrs;
                 if (XGetWindowAttributes(display, root, &winAttrs)) {
                     if (winAttrs.height >= minHeight) {
-                        XRaiseWindow(display, window); // Conditionally raise the cursor window
+                        XRaiseWindow(display, window);
                     }
                 }
                 XFlush(display);
@@ -72,4 +73,3 @@ int main(int argc, char* argv[]) {
     XCloseDisplay(display);
     return 0;
 }
-
